@@ -3,6 +3,11 @@
 #
 export PATH=$HOME/bin:$PATH
 
+# ryan
+# export TERM="xterm-256color"
+# ryan
+# alias tmux="tmux -2"
+
 # =============================================================== #
 #
 # PERSONAL $HOME/.bashrc FILE for bash-3.0 (or later)
@@ -315,7 +320,8 @@ case ${TERM} in
         PS1=${PS1}"\[\e]0;[\u@\h] \w\a\]"
         ;;
     *)
-        PS1="(\A \u@\h \W) > " # --> PS1="(\A \u@\h \w) > "
+        PS1='[\u@\h \W]\$ '
+        # PS1="(\A \u@\h \W) > " # --> PS1="(\A \u@\h \w) > "
                                # --> Shows full pathname of current dir.
         ;;
 esac
