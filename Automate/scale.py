@@ -104,41 +104,41 @@ def create_scale(windtest_id, logicalName = "Balance_0", physicalName = "PHI190-
 
     scale_obj.xd.acqSystemId = safin_obj.id
     scale_obj.xd.parameterName = "M1V1"
-    scale_obj.xd.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_RAWVALUES[0]"
+    scale_obj.xd.groupTangoAddress = "%s/MOD1_RAWVALUES[0]" % safin_obj.address
 
     scale_obj.m1.acqSystemId = safin_obj.id
     scale_obj.m1.parameterName = "M1V2"
-    scale_obj.m1.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_RAWVALUES[1]"
+    scale_obj.m1.groupTangoAddress = "%s/MOD1_RAWVALUES[1]" % safin_obj.address
 
     scale_obj.m2.acqSystemId = safin_obj.id
     scale_obj.m2.parameterName = "M1V3"
-    scale_obj.m2.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_RAWVALUES[2]"
+    scale_obj.m2.groupTangoAddress = "%s/MOD1_RAWVALUES[2]" % safin_obj.address
 
     scale_obj.n1.acqSystemId = safin_obj.id
     scale_obj.n1.parameterName = "M1V4"
-    scale_obj.n1.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_RAWVALUES[3]"
+    scale_obj.n1.groupTangoAddress = "%s/MOD1_RAWVALUES[3]" % safin_obj.address
 
     scale_obj.n2.acqSystemId = safin_obj.id
     scale_obj.n2.parameterName = "M1V5"
-    scale_obj.n2.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_RAWVALUES[4]"
+    scale_obj.n2.groupTangoAddress = "%s/MOD1_RAWVALUES[4]" % safin_obj.address
 
     scale_obj.l.acqSystemId = safin_obj.id
     scale_obj.l.parameterName = "M1V6"
-    scale_obj.l.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_RAWVALUES[5]"
+    scale_obj.l.groupTangoAddress = "%s/MOD1_RAWVALUES[5]" % safin_obj.address
 
     scale_obj.xl.acqSystemId = safin_obj.id
     scale_obj.xl.parameterName = "M1V7"
-    scale_obj.xl.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_RAWVALUES[6]"
+    scale_obj.xl.groupTangoAddress = "%s/MOD1_RAWVALUES[6]" % safin_obj.address
 
     scale_obj.sideSlipAngle.acqSystemId = safin_obj.id
     scale_obj.sideSlipAngle.dataLevel = "ENG"
     scale_obj.sideSlipAngle.parameterName = "POTTOUR"
-    scale_obj.sideSlipAngle.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD2_ENGVALUES[0]"
+    scale_obj.sideSlipAngle.groupTangoAddress = "%s/MOD2_ENGVALUES[0]" % safin_obj.address
 
     scale_obj.attackAngle.acqSystemId = safin_obj.id
     scale_obj.attackAngle.dataLevel = "ENG"
     scale_obj.attackAngle.parameterName = "CLINO"
-    scale_obj.attackAngle.groupTangoAddress = "tango/safin/F1-SAFIN225/MOD1_ENGVALUES[7]"
+    scale_obj.attackAngle.groupTangoAddress = "%s/MOD1_ENGVALUES[7]" % safin_obj.address
 
     session = login()
     r = session.post(satis_url + "windtest/%s/reference/master/scaleconfig" % windtest_id,
